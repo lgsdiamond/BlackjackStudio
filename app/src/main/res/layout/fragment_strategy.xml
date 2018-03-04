@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#fff0ff"
+    tools:context="com.lgsdiamond.blackjackstudio.FragmentStrategy">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:background="#005050"
+        android:paddingBottom="2dp"
+        android:paddingLeft="2dp"
+        android:paddingTop="2dp"
+        android:text="Select Strategy"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffffff" />
+
+    <ListView
+        android:id="@+id/lvStrategies"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="10dp" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnStrategy_New"
+        android:layout_below="@+id/lvStrategies"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSelectedStrategyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="#3232ff"
+            android:paddingBottom="2dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="2dp"
+            android:text="Strategy Title"
+            android:textColor="#ffffa0" />
+
+        <include layout="@layout/row_strategy_action" />
+
+        <ListView
+            android:id="@+id/lvSelectedStrategy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnStrategy_New"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="New..." />
+
+    <Button
+        android:id="@+id/btnStrategy_Save"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/btnStrategy_New"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/btnStrategy_Delete"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/btnStrategy_Save"
+        android:text="Delete" />
+
+    <Button
+        android:id="@+id/btnStrategy_Change"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Change to..." />
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Strategy>
+    <Strategy>
+        <Title>Basic Strategy(S17)</Title>
+        <Description>Most popular basic strategy for LasVegas Strip rule</Description>
+    </Strategy>
+
+    <Strategy>
+        <Title>HS17</Title>
+        <Description>Dealer hit on Soft 17</Description>
+    </Strategy>
+</Strategy>

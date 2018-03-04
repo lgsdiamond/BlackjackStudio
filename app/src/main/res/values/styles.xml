@@ -1,0 +1,74 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <!-- for table fragment element -->
+    <style name="TitleText" parent="@android:style/TextAppearance.Small">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#555555</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:text">title</item>
+        <item name="android:lines">1</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TitleText.Number">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:text">0000</item>
+    </style>
+
+    <style name="TitleText.Name">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:textColor">#7878ff</item>
+        <item name="android:background">#ffffc8</item>
+        <item name="android:gravity">bottom|center_vertical|center_horizontal</item>
+        <item name="android:text">name</item>
+    </style>
+
+    <style name="BettingButton">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:textColor">#141464</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:background">@drawable/selector_betting</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:text">betting</item>
+    </style>
+
+    <style name="PlayingButton">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:background">@drawable/selector_playing</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:text">playing</item>
+    </style>
+
+    <style name="switch_appearance" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">#000032</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="spinner_appearance" parent="@style/Animation.AppCompat.DropDownUp">
+        <item name="android:textColor">#000032</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+</resources>

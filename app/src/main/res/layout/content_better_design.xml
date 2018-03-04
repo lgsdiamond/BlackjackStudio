@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loDesign_Betting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvLabelTitle_Better"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textAlignment="textEnd"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvLabelDescription_Better"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:textAlignment="textEnd"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@+id/etTitle_Better"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvLabelActionValue_Better"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Value:"
+        android:textAlignment="textEnd"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@+id/etDescription_Better"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvLabelMaxLevelCount_Better"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="max Level:"
+        android:textAlignment="textEnd"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@+id/etActionValue_Better"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/etTitle_Better"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/tvLabelTitle_Better"
+        android:layout_marginLeft="5dp"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etDescription_Better"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etTitle_Better"
+        android:layout_alignStart="@+id/etTitle_Better"
+        android:layout_below="@+id/etTitle_Better"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:layout_marginLeft="0dp"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etActionValue_Better"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/etDescription_Better"
+        android:layout_below="@+id/etDescription_Better"
+        android:ems="10"
+        android:inputType="date"
+        android:layout_marginLeft="0dp"
+        android:textSize="14sp"
+        android:longClickable="true" />
+
+    <EditText
+        android:id="@+id/etMaxLevelCount_Better"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etActionValue_Better"
+        android:layout_alignStart="@+id/etActionValue_Better"
+        android:layout_below="@+id/etActionValue_Better"
+        android:ems="10"
+        android:layout_marginLeft="0dp"
+        android:textSize="14sp"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tvLabelActionBase_Better"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="ActionBase:"
+        android:textAlignment="textEnd"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@+id/etMaxLevelCount_Better"
+        android:layout_alignParentStart="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Action will be effect on"
+        android:id="@+id/switchActionBase_Banner"
+        android:layout_below="@+id/etMaxLevelCount_Better"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/etMaxLevelCount_Better"
+        android:textAlignment="center"
+        android:checked="false" />
+
+    <TextView
+        android:id="@+id/tvLabelSequence_Better"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Sequence:"
+        android:textAlignment="textEnd"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignTop="@+id/etSequence_Better"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/etSequence_Better"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_marginLeft="0dp"
+        android:textSize="14sp"
+        android:layout_below="@+id/switchActionBase_Banner"
+        android:layout_alignStart="@+id/switchActionBase_Banner"
+        android:layout_alignEnd="@+id/switchActionBase_Banner" />
+
+</RelativeLayout>

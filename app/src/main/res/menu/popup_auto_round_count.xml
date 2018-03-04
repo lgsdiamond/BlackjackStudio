@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/auto_round_cancel"
+        android:title="Cancel"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/auto_round_10"
+        android:title="10"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/auto_round_100"
+        android:title="100"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/auto_round_1000"
+        android:title="1,000"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/auto_round_10000"
+        android:title="10,000"
+        android:visible="true"/>
+    <item
+        android:id="@+id/auto_round_100000"
+        android:title="100,000"
+        android:visible="true"/>
+</menu>

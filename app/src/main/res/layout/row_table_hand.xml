@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loHandRow"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="3dp"
+    android:paddingTop="3dp"
+    tools:context=".ActivityStudio">
+
+    <RelativeLayout
+        android:id="@+id/loRowHandBox"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:background="#32ffffff">
+
+        <TextView
+            android:id="@+id/tvRowBoxId"
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@color/accent_material_light"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Box-1"
+            android:textColor="#eefa04"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRowStrategy"
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvRowBoxId"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Strategy"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tvRowBetter"
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvRowStrategy"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Better"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:textColor="#ffffff"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/tvRowHandBet"
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvRowInsured"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Bet"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRowInsured"
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvRowHandReward"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Insured"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvRowHandReward"
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Reward"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/row_table_hand_display" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+* predefine Game setting
+-->
+<GameSetting>
+    <BoxCount>3</BoxCount>
+
+    <MinBet>1.0</MinBet>
+    <MaxBet>1000.0</MaxBet>
+
+    <Bankroll>10000.0</Bankroll>
+    <DealerName>Wonder Woman</DealerName>
+    <PlayerName>Superman</PlayerName>
+
+</GameSetting>

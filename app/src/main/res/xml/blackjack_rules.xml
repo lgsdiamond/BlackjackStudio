@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+* predefine Blackjack rules
+-->
+<BlackjackRules>
+    <Rule name="LasVegas Strip Standard">
+        <Title>LasVegas Strip</Title>
+        <Description>Most popular rule in LasVegas Strip</Description>
+        <RuleCategory name="Dealer">
+            <DeckCount>6</DeckCount>
+            <HitOnSoft17>false</HitOnSoft17>
+            <AllowSurrender>false</AllowSurrender>
+            <SecondCardDeal>AtOnce</SecondCardDeal>
+            <AllowPeekHone>true</AllowPeekHone>
+            <BlackjackPayout>3to2</BlackjackPayout>
+        </RuleCategory>
+
+        <RuleCategory name="Doubledown">
+            <DoubledownAfterSplit>true</DoubledownAfterSplit>
+            <DoubledownOn>Any2Cards</DoubledownOn>
+        </RuleCategory>
+
+        <RuleCategory name="Split">
+            <MaxSplit>Always</MaxSplit>
+            <SplitDifferent10>true</SplitDifferent10>
+            <ResplitAce>false</ResplitAce>
+        </RuleCategory>
+    </Rule>
+
+    <Rule name="European Standard">
+        <Title>European</Title>
+        <Description>Popular rules in European countries</Description>
+        <rulecategory name="Dealer">
+            <HitOnSoft17>false</HitOnSoft17>
+            <AllowSurrender>true</AllowSurrender>
+            <SecondCardDeal>Later</SecondCardDeal>
+            <AllowPeekHone>false</AllowPeekHone>
+        </rulecategory>
+
+        <category name="Doubledown">
+            <DoubledownAfterSplit>true</DoubledownAfterSplit>
+            <DoubledownOn>9-10-11</DoubledownOn>
+        </category>
+
+        <category name="Split">
+            <MaxSplit>3</MaxSplit>
+            <SplitDifferent10>true</SplitDifferent10>
+            <ResplitAce>false</ResplitAce>
+        </category>
+    </Rule>
+
+    <Rule name="Weird">
+        <Title>For Test</Title>
+        <Description>Weird rules for testing purpose</Description>
+        <rulecategory name="Dealer">
+            <HitOnSoft17>true</HitOnSoft17>
+            <AllowSurrender>true</AllowSurrender>
+            <SecondCardDeal>Later</SecondCardDeal>
+            <AllowPeekHone>false</AllowPeekHone>
+        </rulecategory>
+
+        <category name="Doubledown">
+            <DoubledownAfterSplit>false</DoubledownAfterSplit>
+            <DoubledownOn>10-11</DoubledownOn>
+        </category>
+
+        <category name="Split">
+            <MaxSplit>1</MaxSplit>
+            <SplitDifferent10>false</SplitDifferent10>
+            <ResplitAce>true</ResplitAce>
+        </category>
+    </Rule>
+</BlackjackRules>

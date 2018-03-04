@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CountingSchema>
+    <Scheme>
+        <Title>Hi-Lo</Title>
+        <Description>Most simple but acceptable</Description>
+    </Scheme>
+
+    <Scheme>
+        <Title>Hi-Opt I</Title>
+        <Description>Most simple but acceptable</Description>
+    </Scheme>
+
+    <Scheme>
+        <Title>Hi-Opt II</Title>
+        <Description>Most simple but acceptable</Description>
+    </Scheme>
+</CountingSchema>

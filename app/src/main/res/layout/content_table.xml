@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loTable"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#002c00"
+    android:orientation="vertical"
+    tools:context=".ActivityStudio">
+
+    <LinearLayout
+        android:id="@+id/loDealer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/loShoe"
+        android:orientation="horizontal">
+
+        <include layout="@layout/row_table_hand" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loShoe"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/tvLabelShoeCount"
+            style="@style/TitleText"
+            android:layout_width="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3dp"
+            android:layout_toStartOf="@+id/tvShoeCount"
+            android:text="S:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvShoeCount"
+            style="@style/TitleText.Number"
+            android:layout_width="75dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/tvLabelShoeCount"
+            android:layout_marginEnd="2dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLabelPotChange"
+            style="@style/TitleText"
+            android:layout_width="15dp"
+            android:layout_alignStart="@+id/tvLabelShoeCount"
+            android:layout_below="@+id/tvLabelShoeCount"
+            android:text="+/-:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvPotChange"
+            style="@style/TitleText.Number"
+            android:layout_width="75dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/tvLabelPotChange"
+            android:layout_marginEnd="2dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvDealerName"
+            style="@style/TitleText.Name"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/ivDealerPicture"
+            android:background="#00ffffff"
+            android:text="dealer"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/ivDealerPicture"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/tvLabelPotChange"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="#00ffffff"
+            android:src="@drawable/dealer" />
+
+        <TextView
+            android:id="@+id/s"
+            style="@style/TitleText"
+            android:layout_width="35dp"
+            android:layout_alignParentStart="false"
+            android:layout_below="@+id/tvDealerName"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@+id/tvDealerRounds"
+            android:text="# Rnd:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvDealerRounds"
+            style="@style/TitleText.Number"
+            android:layout_width="65dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/s"
+            android:layout_marginEnd="2dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLabelDealerBust"
+            style="@style/TitleText"
+            android:layout_width="35dp"
+            android:layout_alignStart="@+id/s"
+            android:layout_below="@+id/s"
+            android:layout_marginTop="5dp"
+            android:text="# Bust:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvDealerBust"
+            style="@style/TitleText.Number"
+            android:layout_width="65dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/tvLabelDealerBust"
+            android:layout_marginEnd="2dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLabelDealerBJ"
+            style="@style/TitleText"
+            android:layout_width="35dp"
+            android:layout_alignStart="@+id/s"
+            android:layout_below="@+id/tvLabelDealerBust"
+            android:text="# BJ:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvDealerBJ"
+            style="@style/TitleText.Number"
+            android:layout_width="65dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/tvLabelDealerBJ"
+            android:layout_marginEnd="2dp"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fvLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/loDealer"
+        android:layout_toStartOf="@+id/loShoe"
+        android:background="#206020"
+        android:clipChildren="false"
+        android:clipToPadding="false"></FrameLayout>
+
+    <ListView
+        android:id="@+id/lvHands"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/loBetButton"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/fvLine"
+        android:layout_toStartOf="@+id/loShoe"
+        android:backgroundTintMode="screen"
+        android:clipChildren="false"
+        android:clipToPadding="false" />
+
+    <LinearLayout
+        android:id="@+id/loPlayButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStartRound"
+        android:layout_toEndOf="@+id/lvHands"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnHit"
+            style="@style/PlayingButton"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Hit"
+            android:textSize="15sp"
+            android:layout_height="36dp" />
+
+        <Button
+            android:id="@+id/btnStand"
+            style="@style/PlayingButton"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Stand"
+            android:textSize="15sp"
+            android:layout_height="36dp" />
+
+        <Button
+            android:id="@+id/btnSplit"
+            style="@style/PlayingButton"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Split"
+            android:textSize="15sp"
+            android:layout_height="36dp" />
+
+        <Button
+            android:id="@+id/btnDoubledown"
+            style="@style/PlayingButton"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Double"
+            android:textSize="15sp"
+            android:layout_height="36dp" />
+
+        <Button
+            android:id="@+id/btnSurrender"
+            style="@style/PlayingButton"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Surrender"
+            android:textSize="15sp"
+            android:layout_height="36dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loBetButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/loPlayer"
+        android:layout_alignParentStart="true"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btnBet0001"
+            style="@style/BettingButton"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:text="$1"
+            android:layout_height="32dp"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnBet0005"
+            style="@style/BettingButton"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnBet0001"
+            android:text="$5"
+            android:layout_height="32dp"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnBet0025"
+            style="@style/BettingButton"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnBet0005"
+            android:text="$25"
+            android:layout_height="32dp"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnBet0100"
+            style="@style/BettingButton"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnBet0025"
+            android:text="$100"
+            android:layout_height="32dp"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnBet0250"
+            style="@style/BettingButton"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnBet0100"
+            android:text="$250"
+            android:layout_height="32dp"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnBet1000"
+            style="@style/BettingButton"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnBet0250"
+            android:text="$1k"
+            android:layout_height="32dp"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnBetReset"
+            style="@style/BettingButton"
+            android:layout_width="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnBet1000"
+            android:background="#c8ffc8"
+            android:text="Reset"
+            android:layout_height="32dp" />
+
+        <Button
+            android:id="@+id/btnBetConfirm"
+            style="@style/BettingButton"
+            android:layout_width="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnBetReset"
+            android:background="#ffd2d2"
+            android:text="Confirm"
+            android:layout_height="32dp" />
+
+        <Button
+            android:id="@+id/btnDeal"
+            style="@style/BettingButton"
+            android:layout_width="fill_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnBetConfirm"
+            android:background="#d2d2ff"
+            android:text="Deal"
+            android:layout_height="32dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_above="@+id/loPlayerOption"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/tvLabelBankroll"
+            style="@style/TitleText"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3dp"
+            android:layout_toStartOf="@+id/tvBankroll"
+            android:text="bankroll:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvBankroll"
+            style="@style/TitleText.Number"
+            android:layout_width="90dp"
+            android:layout_above="@+id/tvLabelWinHands"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="2dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLabelBankrollChange"
+            style="@style/TitleText"
+            android:layout_alignEnd="@+id/tvLabelBankroll"
+            android:layout_below="@+id/tvBankroll"
+            android:text="+/-:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvBankrollChange"
+            style="@style/TitleText.Number"
+            android:layout_width="90dp"
+            android:layout_alignEnd="@+id/tvBankroll"
+            android:layout_alignParentEnd="false"
+            android:layout_below="@+id/tvBankroll"
+            android:layout_margin="0dp"
+            android:layout_marginEnd="2dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLabelLastTotalBet"
+            style="@style/TitleText"
+            android:layout_alignEnd="@+id/tvLabelBankroll"
+            android:layout_below="@+id/tvBankrollChange"
+            android:layout_marginTop="5dp"
+            android:text="last bet:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLastTotalBet"
+            style="@style/TitleText.Number"
+            android:layout_width="90dp"
+            android:layout_alignEnd="@+id/tvBankroll"
+            android:layout_alignParentEnd="false"
+            android:layout_alignStart="@+id/tvBankrollChange"
+            android:layout_below="@+id/tvBankrollChange"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLabelLastWinning"
+            style="@style/TitleText"
+            android:layout_alignEnd="@+id/tvLabelBankroll"
+            android:layout_below="@+id/tvLabelLastTotalBet"
+            android:text="last +/-:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLastWinning"
+            style="@style/TitleText.Number"
+            android:layout_width="90dp"
+            android:layout_alignEnd="@+id/tvBankroll"
+            android:layout_alignParentEnd="false"
+            android:layout_below="@+id/tvLastTotalBet"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLabelTotalHands"
+            style="@style/TitleText"
+            android:layout_width="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/ivPlayerPicture"
+            android:text="# Hand:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvTotalHands"
+            style="@style/TitleText.Number"
+            android:layout_width="80dp"
+            android:layout_alignTop="@+id/tvLabelTotalHands"
+            android:layout_toEndOf="@+id/tvLabelTotalHands"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLabelWinHands"
+            style="@style/TitleText"
+            android:layout_width="50dp"
+            android:layout_alignStart="@+id/tvLabelTotalHands"
+            android:layout_below="@+id/tvLabelTotalHands"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            android:text="# Win:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvWinHands"
+            style="@style/TitleText.Number"
+            android:layout_width="80dp"
+            android:layout_alignTop="@+id/tvLabelWinHands"
+            android:layout_toEndOf="@+id/tvLabelTotalHands"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLabelLostHands"
+            style="@style/TitleText"
+            android:layout_width="50dp"
+            android:layout_alignStart="@+id/tvLabelTotalHands"
+            android:layout_below="@+id/tvLabelWinHands"
+            android:layout_marginStart="0dp"
+            android:text="# Lost:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLostHands"
+            style="@style/TitleText.Number"
+            android:layout_width="80dp"
+            android:layout_alignTop="@+id/tvLabelLostHands"
+            android:layout_toEndOf="@+id/tvLabelTotalHands"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLabelPushHands"
+            style="@style/TitleText"
+            android:layout_width="50dp"
+            android:layout_alignStart="@+id/tvLabelTotalHands"
+            android:layout_below="@+id/tvLabelLostHands"
+            android:text="# Push:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvPushHands"
+            style="@style/TitleText.Number"
+            android:layout_width="80dp"
+            android:layout_alignTop="@+id/tvLabelPushHands"
+            android:layout_toEndOf="@+id/tvLabelTotalHands"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLabelBustHands"
+            style="@style/TitleText"
+            android:layout_width="50dp"
+            android:layout_alignStart="@+id/tvLabelTotalHands"
+            android:layout_below="@+id/tvLabelPushHands"
+            android:layout_marginTop="5dp"
+            android:text="# Bust:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvBustHands"
+            style="@style/TitleText.Number"
+            android:layout_width="80dp"
+            android:layout_alignTop="@+id/tvLabelBustHands"
+            android:layout_toEndOf="@+id/tvLabelTotalHands"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLabelBJHands"
+            style="@style/TitleText"
+            android:layout_width="50dp"
+            android:layout_alignStart="@+id/tvLabelTotalHands"
+            android:layout_below="@+id/tvLabelBustHands"
+            android:text="# BJ:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvBJHands"
+            style="@style/TitleText.Number"
+            android:layout_width="80dp"
+            android:layout_alignTop="@+id/tvLabelBJHands"
+            android:layout_toEndOf="@+id/tvLabelTotalHands"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/ivPlayerPicture"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="2dp"
+            android:background="#00ffffff"
+            android:src="@drawable/player" />
+
+        <TextView
+            android:id="@+id/tvPlayerName"
+            style="@style/TitleText.Name"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivPlayerPicture"
+            android:background="#00ffffff"
+            android:text="player"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnStartRound"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/loShoe"
+        android:layout_toEndOf="@+id/lvHands"
+        android:text="Start"
+        android:textColor="#006400"
+        android:textSize="15sp" />
+
+
+    <LinearLayout
+        android:id="@+id/loPlayerOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnReBet"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="80dp"
+            android:layout_height="24dp"
+            android:background="#145014"
+            android:text="Re-Bet"
+            android:textColor="#b4b400" />
+
+        <Button
+            android:id="@+id/btnIncreaseBankroll"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:background="#145014"
+            android:text="More Bankroll"
+            android:textColor="#b4b400" />
+
+        <Button
+            android:id="@+id/btnSeedChange"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:background="#145014"
+            android:text="No Seed"
+            android:textColor="#b4b400" />
+
+    </LinearLayout>
+
+</RelativeLayout>
